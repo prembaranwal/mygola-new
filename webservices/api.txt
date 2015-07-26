@@ -1,0 +1,28 @@
+Login
+Request Data for login
+http://mygola.comlu.com/webservices/check_signin.php
+{"Email":"kfc@kfctest.com","Password":"Kfc@1234"}
+
+Response
+For empty fields: 
+{"ResponseCode": "10000","ResponseText": "Empty fields"}
+For invalid credentials
+{"ResponseCode": "10003","ResponseText": "Wrong username/password"}
+For blocked merchant
+{"ResponseCode": "10007","ResponseText": "Merchant blocked"}
+For login success
+{"ResponseCode": "11111","ResponseText": "Success for login","Merchantid":1,"Latitude":"12.908136","Longitude":"12.908136","Points":"Exist"} //Points:exist/not exist
+
+---------------------------------------------------------------------------------------------------------------------
+Save Points
+
+Request data
+{"merchant_id":1,"points":[{"latitude":"12.543","longitude":"32.432","text":"Get a bakery shop"},{"latitude":"22.543","longitude":"33.432","text":"Turn at saloon"}]}
+
+Response Data
+For merchant id empty: 
+{"ResponseCode": "10010","ResponseText": "Merchant id is empty"}
+For points empty
+{"ResponseCode": "10011","ResponseText": "Points are empty"}
+For points saved
+{"ResponseCode": "11111","ResponseText": "Points saved"}
